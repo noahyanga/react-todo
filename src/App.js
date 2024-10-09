@@ -113,7 +113,7 @@ function App() {
     // Remove the task after the animation duration
     setTimeout(() => {
       setTasks(tasks.filter((_, i) => i !== index));
-    }, 300); // Match this duration with your CSS animation duration
+    }, 300);
   };
 
   return (
@@ -121,7 +121,6 @@ function App() {
       <div className="app-container">
         <h1>Productivity Manager</h1>
         
-        {/* Display the current task being entered */}
         {newTask && <h2>You better get it done!</h2>}
         
         <TaskInputContainer newTask={newTask} setNewTask={setNewTask} addTask={addTask} />
@@ -139,9 +138,8 @@ function App() {
           ))}
         </ul>
         
-        {/* Display the message below the list */}
         {tasks.length > 0 && (
-          <h3>Current Task ➜ {newTask || tasks[0].text}</h3>
+          <h3>Current Task ➜ {tasks[0].text}</h3>
         )}
       </div>
     </DndProvider>
