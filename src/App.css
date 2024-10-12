@@ -1,4 +1,4 @@
-/* App container styling */
+/* Default styles for larger screens (like desktops) */
 .app-container {
   width: 600px;
   margin: 50px auto;
@@ -10,7 +10,6 @@
   color: #fff;
 }
 
-/* Header styling */
 h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
@@ -32,7 +31,6 @@ h3 {
   font-style: italic;
 }
 
-/* Task input container styling */
 .task-input-container {
   display: flex;
   justify-content: center;
@@ -71,7 +69,6 @@ h3 {
   transform: scale(1.05);
 }
 
-/* Task list styling */
 .task-list {
   list-style-type: none;
   padding: 0;
@@ -100,7 +97,6 @@ h3 {
   text-decoration: line-through;
 }
 
-/* Buttons for tasks */
 .task-buttons {
   display: flex;
   gap: 15px;
@@ -135,15 +131,106 @@ h3 {
 .todo-item.removing {
   background-color: #dc3545;
   transition: background-color 0.3s ease, opacity 0.3s ease;
-  opacity: 0.5; 
+  opacity: 0.5;
 }
 
 .todo-item.adding {
-  background-color: #28a745; 
+  background-color: #28a745;
   transition: background-color 0.5s ease, opacity 0.5s ease;
   opacity: 0.5;
 }
 
 .todo-item {
   transition: background-color 0.5s ease, transform 0.5s ease, opacity 0.4s ease;
+}
+
+/* Media queries for smaller screens (mobile) */
+@media (max-width: 768px) {
+  .app-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  .task-input-container {
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid #00aeff;
+  }
+
+  .task-input {
+    width: 95%;
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+
+  .add-task-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  .task-list {
+    padding: 0;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .task-buttons {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .check-button, .delete-button {
+    font-size: 2rem;
+  }
+}
+
+/* Extra small screen adjustments (mobile phones) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .task-input {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .add-task-button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .todo-item {
+    padding: 8px;
+  }
+
+  .task-buttons {
+    gap: 10px;
+  }
 }

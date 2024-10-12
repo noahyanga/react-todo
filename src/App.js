@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import update from 'immutability-helper';
+import update from 'immutability-helper'; // makes new list with task in new position
 import './App.css';
+
 
 const ItemType = {
   TODO_ITEM: 'TODO_ITEM',
@@ -84,7 +85,7 @@ function App() {
             index === prevTasks.length - 1 ? { ...task, adding: false } : task
           )
         );
-      }, 300); // Match this duration with your CSS animation duration
+      }, 300); 
     }
   };
 
