@@ -1,4 +1,10 @@
 /* Default styles for larger screens (like desktops) */
+
+* {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+
+}
 .app-container {
   width: 600px;
   margin: 50px auto;
@@ -11,16 +17,15 @@
 }
 
 h1 {
-  font-family: 'Poppins', sans-serif;
   font-size: 3rem;
-  color: #f0f0f0;
+  color: #00aeff;
   margin-bottom: 35px;
+  margin-bottom: -1%;
 }
 
 h2 {
-  font-family: 'Roboto', sans-serif;
   font-size: 1.8rem;
-  color: #00aeff;
+  color: #6fc6ee;
   margin-bottom: 25px;
 }
 
@@ -29,6 +34,12 @@ h3 {
   color: #6fc6ee;
   margin-top: 50px;
   font-style: italic;
+}
+
+p{
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  color: #6fc6ee;
 }
 
 .task-input-container {
@@ -93,7 +104,7 @@ h3 {
 
 .todo-item.completed {
   background-color: #3d5c45;
-  color: #9ea0ff;
+  color: #28a745;
   text-decoration: line-through;
 }
 

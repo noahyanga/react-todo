@@ -121,7 +121,8 @@ function App() {
     <DndProvider backend={HTML5Backend}>
       <div className="app-container">
         <h1>Productivity Manager</h1>
-        
+
+        {!newTask && <p>Drag and drop tasks to change priority</p>}
         {newTask && <h2>You better get it done!</h2>}
         
         <TaskInputContainer newTask={newTask} setNewTask={setNewTask} addTask={addTask} />
